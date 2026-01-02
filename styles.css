@@ -1,50 +1,79 @@
+/* ===== NAVBAR ===== */
 .navbar {
-    background-color: #1e1e1e;
+    background: linear-gradient(90deg, #111, #1e1e1e);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .menu {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .menu > li {
     position: relative;
 }
 
+/* Liens principaux */
 .menu a,
 .menu span {
     display: block;
-    padding: 15px 20px;
+    padding: 22px 30px; /* PLUS GRAND */
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
     color: white;
     text-decoration: none;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
+/* Hover principal */
 .menu a:hover,
 .menu span:hover {
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Sous-menus */
+/* ===== SOUS-MENUS ===== */
 .submenu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #2a2a2a;
-    min-width: 200px;
-    list-style: none;
+    background-color: #222;
+    min-width: 230px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
     z-index: 1000;
 }
 
 .submenu li a {
-    padding: 12px 15px;
-    font-weight: normal;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
-/* AFFICHAGE AU SURVOL */
+/* Hover sous-menu */
+.submenu li a:hover {
+    background-color: #333;
+    padding-left: 25px;
+}
+
+/* Affichage */
 .dropdown:hover .submenu {
     display: block;
+}
+
+/* ===== RESPONSIVE SIMPLE ===== */
+@media (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .submenu {
+        position: static;
+        border-radius: 0;
+    }
 }
