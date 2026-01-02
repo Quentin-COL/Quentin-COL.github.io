@@ -1,38 +1,48 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== BODY DARK ===== */
+body {
+    background-color: #1a1a1a; /* gris très foncé */
+    color: #e6e6e6;
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
-    background: linear-gradient(90deg, #111, #1e1e1e);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(90deg, #000, #1b1b1b);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 .menu {
     list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .menu > li {
     position: relative;
 }
 
-/* Liens principaux */
 .menu a,
 .menu span {
     display: block;
-    padding: 22px 30px; /* PLUS GRAND */
-    font-size: 1.05rem;
-    letter-spacing: 0.5px;
-    color: white;
+    padding: 22px 30px;
+    font-size: 1.1rem;
+    color: #f5c542; /* JAUNE FANTASY */
     text-decoration: none;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
-/* Hover principal */
 .menu a:hover,
 .menu span:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(245, 197, 66, 0.15);
 }
 
 /* ===== SOUS-MENUS ===== */
@@ -41,39 +51,59 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #222;
+    background-color: #111;
     min-width: 230px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     overflow: hidden;
     z-index: 1000;
 }
 
 .submenu li a {
     padding: 15px 20px;
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 1rem;
+    color: #f5c542;
 }
 
-/* Hover sous-menu */
 .submenu li a:hover {
-    background-color: #333;
-    padding-left: 25px;
+    background-color: rgba(245, 197, 66, 0.2);
 }
 
-/* Affichage */
+/* Dropdown */
 .dropdown:hover .submenu {
     display: block;
 }
 
-/* ===== RESPONSIVE SIMPLE ===== */
-@media (max-width: 900px) {
-    .menu {
-        flex-direction: column;
-    }
+/* ===== CONTENU ===== */
+.container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #222;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
 
-    .submenu {
-        position: static;
-        border-radius: 0;
-    }
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #f5c542;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #ddd;
+}
+
+.hero b {
+    color: #f5c542;
+    font-size: 1.4rem;
 }
