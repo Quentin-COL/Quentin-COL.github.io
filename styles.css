@@ -3,35 +3,39 @@
 }
 
 .menu {
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
 }
 
 .menu > li {
     position: relative;
 }
 
-.menu a {
+.menu a,
+.menu span {
     display: block;
     padding: 15px 20px;
     color: white;
     text-decoration: none;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu span:hover {
     background-color: #333;
 }
 
+/* Sous-menus */
 .submenu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #2a2a2a;
-    list-style: none;
     min-width: 200px;
+    list-style: none;
     z-index: 1000;
 }
 
@@ -40,6 +44,7 @@
     font-weight: normal;
 }
 
+/* AFFICHAGE AU SURVOL */
 .dropdown:hover .submenu {
     display: block;
 }
