@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Quentin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar chargée dynamiquement -->
+    <div id="navbar"></div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <p>
+                <b>.A propos de moi </b><br><br>
+                Je m’appelle Quentin COLOMBIER--ERGEN, je suis âgé de 19 ans. Je suis actuellement étudiant à Plaisir au lycée Jean Villar, en première année de BTS « SIO spécialité SLAM» Solutions Logicielles et Applications Métiers . Depuis plusieurs années, j’ai toujours été attiré par l’informatique et les nouvelles technologies. C’est tout naturellement que je me suis tourné vers ces études, en effectuant mes trois années d’études en BAC Générale « Spécialité Numérique et science de l'informatique et Mathématique », et mes deux années d’études en BTS Services Informatiques . 
+            </p>
+        </div>
+    </div>
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
